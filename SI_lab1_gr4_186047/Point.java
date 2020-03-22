@@ -85,9 +85,12 @@ class Canvas{
         pointList.remove(point);
     }
 
-    public double findMiddlePoint(Point a, Point b){
+    public void findMiddlePoint(Point a, Point b){
         double middlePointX = (a.x + b.x) / 2;
         double middlePointY = (a.y + b.y) / 2;
+
+        System.out.println("Middle point = (" + middlePointX + ", "
+                + middlePointY + ")");
     }
 
     public moveAllPoints(){
