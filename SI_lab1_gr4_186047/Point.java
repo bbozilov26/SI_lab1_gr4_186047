@@ -72,7 +72,31 @@ class Point {
 		//TODO
         System.out.println(this.id + "(" + this.x + ", " + this.y + ")");
 	}
+}
 
+class Canvas{
+    List<Point> pointList;
 
+    public List<Point> addPoint(Point point){
+        pointList.add(point);
+    }
 
+    public List<Point> removePoint(Point point){
+        pointList.remove(point);
+    }
+
+    public double findMiddlePoint(Point a, Point b){
+        double middlePointX = (a.x + b.x) / 2;
+        double middlePointY = (a.y + b.y) / 2;
+    }
+
+    public moveAllPoints(){
+        char DirX, DirY;
+
+        for(Point p : pointList){
+            DirX = sc.nextLine();
+            DirY = sc.nextLine();
+            p.move(DirX, DirY);
+        }
+    }
 }
